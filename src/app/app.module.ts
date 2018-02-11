@@ -5,19 +5,23 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { CustomersComponent } from './customers/customers.component';
-import { CustomerListComponent } from './customers/customer-list/customer-list.component';
-import { CustomerDetailComponent } from './customers/customer-detail/customer-detail.component';
-import { CustomerItemComponent } from './customers/customer-list/customer-item/customer-item.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CustomersComponent,
-    CustomerListComponent,
-    CustomerDetailComponent,
-    CustomerItemComponent    
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent
   ],
   imports: [
     BrowserModule,
