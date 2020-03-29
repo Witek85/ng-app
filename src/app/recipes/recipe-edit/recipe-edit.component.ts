@@ -26,12 +26,18 @@ export class RecipeEditComponent implements OnInit {
 			}
 			);
 	}
+	
+	get controls() {
+		return (<FormArray>this.recipeForm.get('ingredients')).controls;
+	  }
 
 	private initForm() {
 		let recipeName = '';
 		let recipeImagePath = '';
 		let recipeDescription = '';
 		let recipeIngredients = new FormArray([]);
+
+		console.log('recipeIngredients', recipeIngredients);
 
 		if(this.editMode) {
 			const recipe = this.recipeService.getRecipe(this.id);
@@ -50,6 +56,7 @@ export class RecipeEditComponent implements OnInit {
 						})
 					)
 				}
+				console.log('recipeIngredients editMode', recipeIngredients);
 			}
 		}
 
