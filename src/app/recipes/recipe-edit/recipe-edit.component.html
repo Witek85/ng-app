@@ -19,7 +19,7 @@
         formControlName="imagePath"
         class="form-control"
         #imagePath>
-        <img src="" class="img-responsive">
+        <img [src]="imagePath.value" class="img-responsive">
       </div>
       <div class="form-group">
         <label for="description">Description</label>
