@@ -12,9 +12,6 @@ import { ShoppingListService } from '../shopping-list.service';
 })
 export class ShoppingEditComponent implements OnInit, OnDestroy {
   @ViewChild('f') slForm: NgForm;
-  // @ViewChild('nameInput') nameInputRef: ElementRef;
-  // @ViewChild('amountInput') amountInputRef: ElementRef;
-  // @Output() ingredientAdded = new EventEmitter<Ingredient>();
   subscription: Subscription;
   editMode = false;
   editedItemIndex: number;

@@ -9,7 +9,6 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class RecipeService {
 
-	// recipeSelected = new EventEmitter<Recipe>();
 	recipesChanged = new Subject<Recipe[]>();
 
 	private recipes: Recipe[] = [
