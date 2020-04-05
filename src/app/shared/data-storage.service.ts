@@ -11,8 +11,11 @@ export class DataStorageService {
   constructor(private http: HttpClient, private recipeService: RecipeService, private authService: AuthService) { }
 
   storeRecipes() {
+    let token = this.authService.user.getValue().token;
     const recipes = this.recipeService.getRecipes();
-    this.http.put('https://ng-course-recipe-book-e6d5e.firebaseio.com/recipes.json', recipes).subscribe(response => {
+    this.http.put('https://ng-course-recipe-book-e6d5e.firebaseio.com/recipes.json', recipes, {
+      params: new HttpParams().set('auth', token)
+    }).subscribe(response => {
       console.log(response)
     });
   }
