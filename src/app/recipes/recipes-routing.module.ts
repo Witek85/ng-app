@@ -8,7 +8,7 @@ import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 import { AuthGuard } from '../auth/auth-guard';
 
 const routes: Routes = [
-	{path: 'recipes', component: RecipesComponent, canActivate: [AuthGuard], children: [
+	{path: '', component: RecipesComponent, canActivate: [AuthGuard], children: [
 		{path: '', component: RecipeStartComponent},
 		{path: 'new', component: RecipeEditComponent},
 		{path: ':id', component: RecipeDetailComponent},
